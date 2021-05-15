@@ -160,9 +160,12 @@ export default function SectionContacts({ ...rest }) {
                 }
                 icon={WhatsAppIcon}
               />
-              {/* <img src={QR}></img> */}
+              </GridItem>
+            <GridItem xs={12} sm={6} md={6}>
+              <div style={{textAlign:"center"}}><img src={QR}></img></div>
+              <h5 style={{color:"#ffffff",fontSize:"1.5em", textWeight:"1000", fontFamily:"TimesNewRoman"}}>Scan the QR code</h5>
             </GridItem>
-            <GridItem xs={12} sm={5} md={5} className={classes.mlAuto}>
+            {/*<GridItem xs={12} sm={5} md={5} className={classes.mlAuto}>
               <Card style={{ marginRight: "30px" }} className={classes.card1}>
                 <form>
                   <CardHeader
@@ -223,14 +226,14 @@ export default function SectionContacts({ ...rest }) {
                       }
                       classes={{ label: classes.label }}
                       label="I'm not a robot"
-                    /> */}
+                    /> 
                     <Button color="primary" className={classes.pullRight}>
                       Send Message
                     </Button>
                   </CardFooter>
                 </form>
               </Card>
-            </GridItem>
+            </GridItem>*/}
           </GridContainer>
         </div>
       </div>
