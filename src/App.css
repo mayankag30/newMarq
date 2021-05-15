@@ -51,6 +51,22 @@
   letter-spacing: normal !important;
   display: block;
 }
+.body h7{
+  color: #f6f8fa;
+  margin-top: 0.625rem;
+  min-height: auto;
+  font-family: "Roboto Slab", "Times New Roman", serif;
+  font-weight: 700;
+  margin-bottom: 0rem;
+  text-decoration: none;
+  font-size: 1.125rem;
+  line-height: 1.5em;
+  box-sizing: border-box;
+  letter-spacing: normal !important;
+  display: block;
+
+}
+
 
 /* .body p,
 h5 {
