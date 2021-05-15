@@ -1,4 +1,5 @@
 /*eslint-disable*/ import React from "react";
+import {Link as ScrollL} from "react-scroll";
 // nodejs library to set properties for components
 import PropTypes from "prop-types";
 // nodejs library that concatenates classes
@@ -23,12 +24,10 @@ import landingPageStyle from "./landingPageStyle";
 
 // Sections for this page
 import SectionProduct from "./Sections/SectionProduct";
-import SectionTestimonials from "../Reviews/SectionTestimonials";
-// import SectionTeam from "./Sections/SectionTeam2";
-// import SectionWork from "./Sections/SectionWork";
+import SectionTeam from "./Sections/SectionTeam2";
+import SectionWork from "./Sections/SectionWork";
 
 const useStyles = makeStyles(landingPageStyle);
-
 import QR from "../../assets/images/qr.jpeg";
 
 export default function LandingPage({ ...rest }) {
@@ -50,39 +49,57 @@ export default function LandingPage({ ...rest }) {
         }}
         {...rest}
       /> */}
-      <Parallax image={"home2.jpg"} filter="dark">
+      
+      <Parallax image={require("./bg8.jpg")} filter="dark">
+        
         <div className={classes.container}>
           <GridContainer>
             <GridItem xs={12} sm={6} md={6}>
-              <h1 className={classes.title}>MARQUEDO</h1>
+            <br />
+            {/* <br /> */}
+            {/* <br /> */}
+            <h1 className={classes.title}>MARQUEDO</h1>
               <h4>
-                We at Marquedo introduce Free Deliveries From any Shop any store
-                dealing with Essentials nearby without the Hassle of you
-                standing in Long Queues and maintian the safety and Hygiene.
+                Every landing page needs a small description after the big bold
+                title, that{"'"}s why we added this text here. Add here all the
+                information that can make you or your product create the first
+                impression.
               </h4>
               <br />
+              {/* <ScrollL activeClass="active" to="playersection" spy={true} smooth={true} duration={1000}>scroll</ScrollL> */}
               <Button
                 color="danger"
                 size="lg"
-                href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ref=creativetim"
+                // href="/about/:playersection"
                 target="_blank"
               >
                 <i className="fas fa-play" />
                 Watch video
               </Button>
-              {/* <img src={QR}></img> */}
+              </GridItem>
+              <br />
+              <GridItem xs={12} sm={6} md={6} >
+              <div style={{textAlign:"center"}}><h7>Scan the QR code and<br></br> WhatsApp us a {"'"}Hi{"'"} today</h7></div>           
+              <br /><div style={{textAlign:"center"}}><img src={QR} style={{justifyContent:"center"}}></img></div>
+              
             </GridItem>
           </GridContainer>
         </div>
       </Parallax>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div className={classes.container}>
           <SectionProduct />
           {/* <SectionTeam /> */}
           {/* <SectionWork /> */}
-          <SectionTestimonials />
-          <br />
-          <br />
           <SectionContacts />
         </div>
       </div>
