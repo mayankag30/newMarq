@@ -17,6 +17,8 @@ import Menu from "@material-ui/icons/Menu";
 import Close from "@material-ui/icons/Close";
 // core components
 import styles from "./headerStyle";
+import logowhite from "./logo-transparent-white.png";
+// import logoblack from "./logo-transparent-black.png";
 
 const useStyles = makeStyles(styles);
 
@@ -56,7 +58,7 @@ export default function Header(props) {
         .classList.remove(classes[changeColorOnScroll.color]);
     }
   };
-  const { color, links, brand, fixed, absolute } = props;
+  const { color, links,  fixed, absolute } = props;
   const appBarClasses = classNames({
     [classes.appBar]: true,
     [classes[color]]: color,
@@ -69,13 +71,15 @@ export default function Header(props) {
         <Button className={classes.title}>
           <NavLink
             style={{
-              fontSize: "1.3rem",
-              textDecoration: "none",
-              color: "#151515",
+              // fontSize: "1.3rem",
+              // textDecoration: "none",
+              // color: "#151515",
+              // marginRight: "30px",
+
             }}
             to="/home"
           >
-            {brand}
+            <img src={logowhite} id="logo-withname" width="250px" height="50"></img>
           </NavLink>
         </Button>
         <Hidden smDown implementation="css" className={classes.hidden}>
