@@ -22,7 +22,7 @@ import SectionDescription from "./Sections/SectionDescription.js";
 import SectionTeam from "./Sections/SectionTeam2";
 import SectionServices from "./Sections/SectionServices.js";
 // import SectionOffice from "./Sections/SectionOffice.js";
-import ResponsivePlayer from "../VideoPlayer/ResponsivePlayer";
+
 import SectionContact from "./Sections/SectionContact.js";
 
 import aboutUsStyle from "./aboutUsStyle";
@@ -74,7 +74,7 @@ export default function AboutUsPage() {
           <SectionDescription />
           <SectionTeam />
           <SectionServices />
-          <ResponsivePlayer />
+          
           {/* <SectionOffice /> */}
           {/* <SectionContact /> */}
         </div>
