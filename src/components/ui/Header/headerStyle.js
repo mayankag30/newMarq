@@ -14,6 +14,8 @@ import {
 
 const headerStyle = {
   appBar: {
+    height:"70px",
+    paddingBottom:"0px",
     display: "flex",
     border: "0",
     borderRadius: "3px",
