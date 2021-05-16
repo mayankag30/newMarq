@@ -19,7 +19,7 @@ import Button from "../ui/CustomButtons/Button";
 // import HeaderLinks from "../ui/Header/HeaderLinks";
 import Parallax from "../ui/Parallax/Parallax";
 import SectionContacts from "../ui/ContactUs/ContactUs";
-
+import ResponsivePlayer from "../ui/VideoPlayer/ResponsivePlayer";
 import landingPageStyle from "./landingPageStyle";
 
 // Sections for this page
@@ -29,6 +29,7 @@ import SectionWork from "./Sections/SectionWork";
 
 const useStyles = makeStyles(landingPageStyle);
 import QR from "../../assets/images/qr.jpeg";
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 export default function LandingPage({ ...rest }) {
   React.useEffect(() => {
@@ -67,7 +68,7 @@ export default function LandingPage({ ...rest }) {
               </h4>
               <br />
               {/* <ScrollL activeClass="active" to="playersection" spy={true} smooth={true} duration={1000}>scroll</ScrollL> */}
-              <Button
+              <AnchorLink href='#videoPlayer' style={{textDecoration:"none"}}><Button
                 color="danger"
                 size="lg"
                 // href="/about/:playersection"
@@ -75,7 +76,7 @@ export default function LandingPage({ ...rest }) {
               >
                 <i className="fas fa-play" />
                 Watch video
-              </Button>
+              </Button></AnchorLink>
               </GridItem>
               <br />
               <GridItem xs={12} sm={6} md={6} >
@@ -100,62 +101,13 @@ export default function LandingPage({ ...rest }) {
           <SectionProduct />
           {/* <SectionTeam /> */}
           {/* <SectionWork /> */}
+          <section id='videoPlayer'><ResponsivePlayer/></section>
+          <br />
+         
           <SectionContacts />
         </div>
       </div>
-      {/* <Footer
-        content={
-          <div>
-            <div className={classes.left}>
-              <List className={classes.list}>
-                <ListItem className={classes.inlineBlock}>
-                  <a
-                    href="https://www.creative-tim.com/?ref=mkpr-landing"
-                    target="_blank"
-                    className={classes.block}
-                  >
-                    Creative Tim
-                  </a>
-                </ListItem>
-                <ListItem className={classes.inlineBlock}>
-                  <a
-                    href="https://www.creative-tim.com/presentation?ref=mkpr-landing"
-                    target="_blank"
-                    className={classes.block}
-                  >
-                    About us
-                  </a>
-                </ListItem>
-                <ListItem className={classes.inlineBlock}>
-                  <a href="//blog.creative-tim.com/" className={classes.block}>
-                    Blog
-                  </a>
-                </ListItem>
-                <ListItem className={classes.inlineBlock}>
-                  <a
-                    href="https://www.creative-tim.com/license?ref=mkpr-landing"
-                    target="_blank"
-                    className={classes.block}
-                  >
-                    Licenses
-                  </a>
-                </ListItem>
-              </List>
-            </div>
-            <div className={classes.right}>
-              &copy; {1900 + new Date().getYear()} , made with{" "}
-              <Favorite className={classes.icon} /> by{" "}
-              <a
-                href="https://www.creative-tim.com/?ref=mkpr-landing"
-                target="_blank"
-              >
-                Creative Tim
-              </a>{" "}
-              for a better web.
-            </div>
-          </div>
-        }
-      /> */}
+      
     </div>
   );
 }
