@@ -79,7 +79,7 @@ export default function Header(props) {
             }}
             to="/home"
           >
-            <img src={logowhite} id="logo-withname" width="250px" height="50"></img>
+            <img src={logowhite} id="logo-withname" width="200px" height="40"></img>
           </NavLink>
         </Button>
         <Hidden smDown implementation="css" className={classes.hidden}>
